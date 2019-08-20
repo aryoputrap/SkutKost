@@ -13,6 +13,9 @@ import { Header } from 'react-native-elements';
 
 // })
 
+
+
+
 const tabNavigator = createBottomTabNavigator({
   // navigasi home
   Home: {

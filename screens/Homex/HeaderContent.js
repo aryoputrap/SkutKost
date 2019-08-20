@@ -14,7 +14,7 @@ render(){
                 
                 
                 <View style={{flex:1,}}>
-                <Icon name="reorder" style={{position: 'absolute', top: 12, bottom: 12, fontSize: '20'}}/>
+                <Icon name="reorder" style={{position: 'absolute', top: 12, bottom: 12, color: 'white'}}/>
                     <Text style={{flex:1, color:"white", textAlign: 'center', fontWeight: 'bold', alignContent:'space-between', textAlignVertical: 'center'}}>
                        SKUT KOST
                     </Text>

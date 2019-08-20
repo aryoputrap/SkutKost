@@ -8,7 +8,8 @@ import { withNavigation } from 'react-navigation';
 export default class List extends Component {
   render() {
     return (
-        <View style={{position:'absolute',Bottom: 0, flexDirection:'row', marginTop:630, marginLeft:120, alignContent:'center'}}>
+        
+        <View style={{position:'absolute', bottom: 0, flexDirection:'row', flex: 1, alignSelf: 'center', paddingBottom:15}}>
         <Button
         onPress={() =>alert('Ini Filter')}
         style={styles.Button} icon="art-track" size={50} color={'#e67e22'} mode={'outlined'}>
@@ -20,6 +21,7 @@ export default class List extends Component {
           <Text>Urutkan</Text>
         </Button>
         </View>
+        
     );
   }
 }
