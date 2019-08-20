@@ -2,6 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet, ScrollView, TextInput, Image} from 'react-native';
 import { Text,  Button,} from 'react-native-paper';
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+import ImagePicker from 'react-native-image-crop-picker';
 
 import Searchinput from '../../../component/Searchinput'
 import Mapiklan from './Mapiklan'
@@ -15,6 +16,17 @@ class IklanForm extends React.Component{
     handleGoBack = () => {
         this.props.navigation.navigate("Home");
       };
+
+      //Pick Image
+      
+      handlerPickerImage = function(){
+        ImagePicker.openPicker({
+            multiple: true
+          }).then(images => {
+            console.log(images);
+          });
+      }
+
 
     render() {
 
@@ -30,6 +42,7 @@ class IklanForm extends React.Component{
             {label: 'Apartemen', value: 1},
             {label: 'Losmen', value: 2},
           ];
+          
 
         return (
         
@@ -93,7 +106,7 @@ class IklanForm extends React.Component{
                     <TextInput placeholder="Harga Bulanan" placeholderTextColor="black"
                     style={styles.input} />
 
-                    <Button style={styles.button} mode="contained" marginBottom={10} onPress={() => console.log('Pressed')}>
+                    <Button style={styles.button} mode="contained" onPress={this.handlerPickerImage}>
                         <Text style={styles.title2}>Upload Foto</Text>
                     </Button>
 
@@ -133,7 +146,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#e67e22',
         marginRight:20,
         marginLeft:20,
-        alignItems:'center'
+        alignItems:'center',
+        marginBottom: 15
     },
     Searchbar: {
         borderRadius: 20,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StatusBar } from 'react-native';
-import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator, createAppContainer, createStackNavigator, createSwitchNavigator} from 'react-navigation';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 
@@ -9,8 +9,12 @@ import Profilnavigasi from './navigator/Profilnavigasi'
 import Wishlistnavigasi from './navigator/Wishlistnavigasi'
 import { Header } from 'react-native-elements';
 
+// const guesNavigator = createStackNavigator({
 
-const mainNavigator = createBottomTabNavigator({
+// })
+
+const tabNavigator = createBottomTabNavigator({
+  // navigasi home
   Home: {
     screen: Homenavigasi,
     navigationOptions:  {
@@ -21,8 +25,9 @@ const mainNavigator = createBottomTabNavigator({
               size = {25} /> )
     }
   },
-  
-    Whishlist: {
+
+  // navigasi wishislist
+    Wishlist: {
       screen: Wishlistnavigasi,
       navigationOptions:  {
         tabBarIcon: ({
@@ -33,6 +38,7 @@ const mainNavigator = createBottomTabNavigator({
       }
     },
 
+  // navigasi Profil
   Profil: {
     screen: Profilnavigasi,
     navigationOptions:  {
@@ -44,21 +50,29 @@ const mainNavigator = createBottomTabNavigator({
     }
   },
  }, 
- 
- {
 
-  initialRouteName : "Home",
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor : '#2980b9'
-    },
-    headerTintColor: '#FFF'
-  },
-  tabBarOptions: {
-    activeTintColor: '#e67e22',
-    inactiveTintColor: 'grey'
-  }
+{
 
+ initialRouteName : "Home",
+ defaultNavigationOptions: {
+   headerStyle: {
+     backgroundColor : '#2980b9'
+   },
+   headerTintColor: '#FFF'
+ },
+ tabBarOptions: {
+   activeTintColor: '#e67e22',
+   inactiveTintColor: 'grey'
+ }
 });
 
-export default createAppContainer(mainNavigator);
+// const mainNavigator = createSwitchNavigator({})
+
+//  Guest:{
+// //   screen:
+// // }
+  
+
+//  });
+
+export default createAppContainer(tabNavigator);

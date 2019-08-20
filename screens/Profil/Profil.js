@@ -13,7 +13,8 @@ render() {
     <ScrollView style={{backgroundColor: '#FFFF'}}>
       <StatusBar backgroundColor="#f0932b" barStyle="light-content"/>
       <Appbar.Header style={styles.Aheader}>
-          <Appbar.Content title={'Profil'}/>
+          <Appbar.Content title={'Profil'}
+            color={'white'}/>
       </Appbar.Header>
 
       <View style={styles.container}>

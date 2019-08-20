@@ -9,7 +9,8 @@ export default class List extends Component {
     return (
       <Container>
          <Appbar.Header style={styles.Aheader}>
-          <Appbar.Content title={'Wishlist'}/>
+          <Appbar.Content title={'Wishlist'}
+          color={'white'}/>
       </Appbar.Header>
         
         <Tabs>

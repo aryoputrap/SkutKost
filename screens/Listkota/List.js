@@ -20,7 +20,7 @@ export default class List extends Component {
   render() {
     const autoFocus = this.props.navigation.getParam("autoFocus", false);
     return (
-      <Container>
+      <Container style={{flex:1, position:'relative'}}>
 
 
         <Searchinput

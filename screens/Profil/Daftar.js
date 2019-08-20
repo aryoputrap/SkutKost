@@ -28,6 +28,9 @@ class Daftar extends React.Component{
                     <TextInput placeholder="Email" placeholderTextColor="rgba(255,255,255,0.9)" 
                     style={styles.input} />
 
+                    <TextInput placeholder="Username" placeholderTextColor="rgba(255,255,255,0.9)" 
+                    style={styles.input} />
+
                     <TextInput placeholder="Password" placeholderTextColor="rgba(255,255,255,0.9)"
                     secureTextEntry
                     style={styles.input} />

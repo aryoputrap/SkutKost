@@ -24,7 +24,7 @@ class Login extends React.Component{
 
                     <Text style={{fontSize:15, textAlign: 'center', marginBottom: 20, color: '#FFF'}}>SkutKost Mudah Cepat Dan Tepat dimanapun kostnya carinya pasti di SkuKost</Text>
 
-                    <TextInput placeholder="Email" placeholderTextColor="rgba(255,255,255,0.9)" 
+                    <TextInput placeholder="Username" placeholderTextColor="rgba(255,255,255,0.9)" 
                     style={styles.input} />
 
                     <TextInput placeholder="Password" placeholderTextColor="rgba(255,255,255,0.9)"

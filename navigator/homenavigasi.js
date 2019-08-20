@@ -7,11 +7,6 @@ import Form from '../screens/Homex/Iklan/Form'
 import Homedetail from '../screens/Homex/Detailkosan/HomeKostdetail'
 import ListItem from '../screens/Listkota/ListItem'
 import LihatDaftar from '../screens/Listkota/LihatDaftar'
-
-// import Profil from '../screens/Profil/Profil'
-// import Daftar from '../screens/Profil/Daftar'
-// import Login from '../screens/Profil/Login'
-// import detailProfil from '../screens/Profil/detailProfil'
   
 
 import Kos from '../screens/Homex/Detailkosan/kostList'
@@ -25,6 +20,8 @@ const Homenavigasi = createStackNavigator(
                 header: null
             }
         },
+
+        //form iklan
          Form: {
             screen: Form,
             navigationOptions: {
@@ -55,30 +52,6 @@ const Homenavigasi = createStackNavigator(
                 header: null
             }
         },
-        // Profil: {
-        //     screen: Profil,
-        //     navigationOptions: {
-        //         header: null
-        //     }
-        // },
-        // Daftar: {
-        //     screen: Daftar,
-        //     navigationOptions: {
-        //         header: null
-        //     }
-        // },
-        // Login: {
-        //     screen: Login,
-        //     navigationOptions: {
-        //         header: null
-        //     }
-        // },
-        // detailProfil: {
-        //     screen: detailProfil,
-        //     navigationOptions: {
-        //         header: null
-        //     }
-        // },
 
 
     });
