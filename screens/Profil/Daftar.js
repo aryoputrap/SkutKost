@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ScrollView, TextInput, Image } from 'react-native';
+import { View, StyleSheet, ScrollView, TextInput, Image, StatusBar } from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
 
 class Daftar extends React.Component{
@@ -8,7 +8,9 @@ class Daftar extends React.Component{
   
         return (
             
-            <ScrollView style={{backgroundColor: '#16a085'}}>
+            <ScrollView style={{backgroundColor: '#e67e22'}}>
+
+            <StatusBar backgroundColor="#f0932b" barStyle="light-content"/>
 
             <View style={styles.container}>
 
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
 
     button: {
         borderRadius: 20,
-        backgroundColor: '#e67e22',
+        backgroundColor: '#16a085',
     },
 
     title2: {

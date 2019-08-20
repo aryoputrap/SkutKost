@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Container, Tab, Tabs, TabHeading, Icon, Text } from 'native-base';
+import { Container, Tab, Tabs, TabHeading, Text } from 'native-base';
 import { StyleSheet, View} from 'react-native';
 import { Button, Appbar  } from 'react-native-paper';
-
+import Icon from 'react-native-vector-icons/AntDesign';
 
 export default class List extends Component {
   render() {
@@ -14,12 +14,12 @@ export default class List extends Component {
         
         <Tabs>
               <Tab heading={ <TabHeading style={{backgroundColor: '#e67e22'}}>
-              <Icon style={{color:'#ffff'}}/>
+              <Icon name= "hearto" style={{color:'#ffff', fontSize: 20 }}/>
               <Text style={{color:'#ffff', fontWeight:'bold'}}>Favorit</Text></TabHeading>}>
                 {/* parsing */}
               </Tab>
               <Tab  heading={ <TabHeading style={{backgroundColor: '#e67e22',}}>
-              <Icon style={{color:'#ffff'}}/>
+              <Icon name="eyeo" style={{color:'#ffff', fontSize: 20}}/>
               <Text  style={{color:'#ffff', fontWeight:'bold'}} >Dilihat</Text></TabHeading>}>
                 {/* parsing2 */}
               </Tab>

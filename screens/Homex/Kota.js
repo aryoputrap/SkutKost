@@ -56,12 +56,12 @@ export default class Kota extends Component{
             <Content horizontal>
                 {dataAtas.map((data,index)=>{
                 return(
-                    <Card key={index} style={{ height:150, }} transparent>
+                    <Card key={index} style={{ height:200, }} transparent>
                         <CardItem style={{flexDirection:"column"}}>
                         
                             <TouchableOpacity onPress={this.props.hehe}>
-                                <Thumbnail style={{ height:100, width: 100}} source={{uri:data.gambar}}/>
-                                <Text>{data.nama}</Text>
+                                <Thumbnail style={{ height:150, width: 100}} source={{uri:data.gambar}}/>
+                                <Text style={{textAlign: 'center'}}>{data.nama}</Text>
                             </TouchableOpacity> 
                         </CardItem>
                     </Card>

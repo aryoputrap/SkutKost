@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { View, Image, StyleSheet, ScrollView } from 'react-native';
+import { View, Image, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { Text, Appbar, Button, } from 'react-native-paper';
 // import ProfilNav from '../../navigator/Profilnavigasi';
-import Login from '../Profil/Login';
 
 
 class Profil extends React.Component{
@@ -10,8 +9,9 @@ class Profil extends React.Component{
 render() {
 
     return (
-
+      
     <ScrollView style={{backgroundColor: '#FFFF'}}>
+      <StatusBar backgroundColor="#f0932b" barStyle="light-content"/>
       <Appbar.Header style={styles.Aheader}>
           <Appbar.Content title={'Profil'}/>
       </Appbar.Header>
@@ -29,7 +29,7 @@ render() {
               <Text style={styles.title}> Login </Text> </Button>
               
              <View style={styles.button}> 
-            <Button style={styles.login} mode="contained">
+              <Button style={styles.login} mode="contained" onPress={() => this.props.navigation.navigate('Daftar')}>
               <Text style={styles.title}>Daftar</Text> </Button>
             </View>
             </View>

@@ -1,47 +1,64 @@
-import React,{Component} from "react";
-import { BottomNavigation, Text } from 'react-native-paper';
-
-import HomeRoute from "./screens/Homex/Home";
-
-import WishlistRoute from './screens/Wishlist/wish';
-import TesRoute from './screens/Tes/Tes';
-import Profil from './screens/Profil/Profil';
-import Routes from './navigator/homenavigasi';
-import Login from  './screens/Profil/Login'
-
-const ChatRoute = () => <Text>Chat</Text>;
+import React from 'react';
+import { View, StatusBar } from 'react-native';
+import {createBottomTabNavigator, createAppContainer} from 'react-navigation';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
-export default class App extends React.Component {
-  state = {
-    index: 0,
-    routes: [
-      { key: 'home', title: 'Home', icon: 'search' , color: 'white'},
-      { key: 'wishlist', title: 'Wish', icon: 'favorite-border', color: 'white' },
-      { key: 'chat', title: 'Chat', icon: 'question-answer', color: 'white' },
-      { key: 'Profil', title: 'Profil', icon: 'perm-identity', color: 'white' },
-    ],
-  };
+import Homenavigasi from './navigator/Homenavigasi';
+import Profilnavigasi from './navigator/Profilnavigasi'
+import Wishlistnavigasi from './navigator/Wishlistnavigasi'
+import { Header } from 'react-native-elements';
 
-  _handleIndexChange = index => this.setState({ index });
 
-  _renderScene = BottomNavigation.SceneMap({
-    home : Routes,
-    wishlist: WishlistRoute,
-    chat: ChatRoute,
-    Profil:Profil
+const mainNavigator = createBottomTabNavigator({
+  Home: {
+    screen: Homenavigasi,
+    navigationOptions:  {
+      tabBarIcon: ({
+        tintColor
+      }) => ( <Icon name = "home"
+              color = {tintColor}
+              size = {25} /> )
+    }
+  },
   
-  });
+    Whishlist: {
+      screen: Wishlistnavigasi,
+      navigationOptions:  {
+        tabBarIcon: ({
+          tintColor
+        }) => ( <Icon name = "heart"
+                color = {tintColor}
+                size = {25} /> )
+      }
+    },
 
-  render() {
-    return (
-      <BottomNavigation
-        navigationState={this.state}
-        onIndexChange={this._handleIndexChange}
-        renderScene={this._renderScene}
-        activeColor="orange"
-        inactiveColor="silver"
-      />
-    );
+  Profil: {
+    screen: Profilnavigasi,
+    navigationOptions:  {
+      tabBarIcon: ({
+        tintColor
+      }) => ( <Icon name = "user-circle-o"
+              color = {tintColor}
+              size = {25} /> )
+    }
+  },
+ }, 
+ 
+ {
+
+  initialRouteName : "Home",
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor : '#2980b9'
+    },
+    headerTintColor: '#FFF'
+  },
+  tabBarOptions: {
+    activeTintColor: '#e67e22',
+    inactiveTintColor: 'grey'
   }
-}
+
+});
+
+export default createAppContainer(mainNavigator);

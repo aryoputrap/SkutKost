@@ -17,7 +17,7 @@ import LihatDaftar from '../screens/Listkota/LihatDaftar'
 import Kos from '../screens/Homex/Detailkosan/kostList'
 import BookingCalender from '../screens/Homex/Detailkosan/BookingCalender.'
 
-const HomeList = createStackNavigator(
+const Homenavigasi = createStackNavigator(
     { 
         Home: {
             screen: Home,
@@ -83,26 +83,5 @@ const HomeList = createStackNavigator(
 
     });
 
-const HomeContainer = createAppContainer(HomeList)
-
-
-class Navigasi extends Component {
-    render() {
-        return (
-            <HomeContainer />
-        )
-    }
-}
-
-HomeContainer.navigationOptions = ({ navigation }) => {
-    let tabBarVisible = true;
-    if (navigation.state.index > 0) {
-        tabBarVisible = false;
-    }
-    return {
-        tabBarVisible
-    };
-};
-
-export default Navigasi;
+export default Homenavigasi;
 

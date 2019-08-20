@@ -17,7 +17,9 @@ export default class HomeRender extends Component {
     render() {
      
       return (
-        <Content style={{backgroundColor: 'white'}}>
+        <Content style={{backgroundColor: 'white', flex:1}}>
+
+          <StatusBar backgroundColor="#f0932b" barStyle="light-content"/>
          
           <View>
           

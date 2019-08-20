@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View} from 'react-native';
+import {View, StatusBar} from 'react-native';
 import {Header,Left,Text, Icon,Body,Right,  Button, Content, Container} from 'native-base';
 
 export default class HeaderContent extends Component{
@@ -9,6 +9,7 @@ render(){
         
         <View>
             <Header style={{backgroundColor:"#e67e22"}}>
+            <StatusBar backgroundColor="#f0932b" barStyle="light-content"/>
                 <Left>
                        <Icon name="reorder"/>
                 </Left>

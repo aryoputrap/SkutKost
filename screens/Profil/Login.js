@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, StyleSheet, ScrollView, TextInput, Image} from 'react-native';
+import { View, StyleSheet, ScrollView, TextInput, Image, StatusBar} from 'react-native';
 import { Text,  Button, } from 'react-native-paper';
 
 import Profile from './Profil'
@@ -10,7 +10,9 @@ class Login extends React.Component{
   
         return (
             
-            <ScrollView style={{backgroundColor: '#16a085'}}>
+            <ScrollView style={{backgroundColor: '#e67e22'}}>
+
+            <StatusBar backgroundColor="#f0932b" barStyle="light-content"/>
 
             <View style={styles.container}>
 
@@ -29,7 +31,7 @@ class Login extends React.Component{
                     secureTextEntry
                     style={styles.input} />
 
-                    <Button style={styles.button} mode="contained" 
+                    <Button style={styles.button} mode="contained" onPress={() => this.props.navigation.navigate('detailProfil')}
                               apps={this.props.Login}>
                         <Text style={styles.title2}>Login</Text>
                     </Button>
@@ -80,7 +82,7 @@ const styles = StyleSheet.create({
 
     button: {
         borderRadius: 20,
-        backgroundColor: '#e67e22',
+        backgroundColor: '#16a085',
     },
 
     title2: {
